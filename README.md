@@ -1,0 +1,1 @@
+# com.squalive.entities
