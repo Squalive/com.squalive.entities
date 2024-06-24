@@ -7,11 +7,11 @@ namespace Unity.Entities.Conversion
 {
     public static class LiveConversionSettings
     {
-        private const string EditorPrefsConversionMode = "com.unity.entities.conversion_mode";
-        private const string EditorPrefsConversionDebugLog = "com.unity.entities.conversion_debug_logging";
-        private const string EditorPrefsBakingEnabled = "com.unity.entities.baking_enabled";
-        private const string EditorPrefsLiveBakingLoggingEnabled = "com.unity.entities.baking_logging";
-        private const string EditorPrefsBuiltinBuildsEnabled = "com.unity.entities.baking.builtin_builds_enabled";
+        private const string EditorPrefsConversionMode = "com.squalive.entities.conversion_mode";
+        private const string EditorPrefsConversionDebugLog = "com.squalive.entities.conversion_debug_logging";
+        private const string EditorPrefsBakingEnabled = "com.squalive.entities.baking_enabled";
+        private const string EditorPrefsLiveBakingLoggingEnabled = "com.squalive.entities.baking_logging";
+        private const string EditorPrefsBuiltinBuildsEnabled = "com.squalive.entities.baking.builtin_builds_enabled";
 
         internal enum ConversionMode
         {

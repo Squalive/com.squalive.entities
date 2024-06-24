@@ -643,11 +643,11 @@ var readonlyBuffer = SystemAPI.GetBufferLookup<MyElement>(true)[e];
 
 ## Add the Entities Graphics package to your project
 
-The Hybrid Rendering package (com.unity.rendering.hybrid) has been renamed to Entities Graphics (com.unity.entities.graphics) for consistency. The Hybrid Renderer still exists as an empty utility package with a dependency on Entities Graphics so you won't encounter any problem. However, you should add the Entities Graphics package to your project directly to avoid any errors in the future when the Hybrid Renderer package is removed completely.
+The Hybrid Rendering package (com.unity.rendering.hybrid) has been renamed to Entities Graphics (com.squalive.entities.graphics) for consistency. The Hybrid Renderer still exists as an empty utility package with a dependency on Entities Graphics so you won't encounter any problem. However, you should add the Entities Graphics package to your project directly to avoid any errors in the future when the Hybrid Renderer package is removed completely.
 
 If your project uses stock hybrid rendering you don't need to change your code. If you're using hybrid rendering classes or structs in your custom code, you might need to rename some classes. As a rule of thumb, any `Hybrid` in a class, struct, or enum has been replaced with `EntitiesGraphics`. For example, `UpdateOldHybridChunksJob` is now `UpdateOldEntitiesGraphicsChunksJob`.
 
-For further information upgrading to Entities Graphics, see the [Entities Graphics upgrade guide](https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.0/manual/upgrade-guide.html). 
+For further information upgrading to Entities Graphics, see the [Entities Graphics upgrade guide](https://docs.unity3d.com/Packages/com.squalive.entities.graphics@1.0/manual/upgrade-guide.html). 
 
 ## Modify blob assets that use new or default
 

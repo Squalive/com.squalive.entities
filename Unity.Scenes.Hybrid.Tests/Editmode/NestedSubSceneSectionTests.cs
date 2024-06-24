@@ -74,7 +74,7 @@ namespace Unity.Scenes.Hybrid.Tests
 
         public NestedSubSceneSectionTests()
         {
-            PlayModeScenePath = "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/NestedSubSceneSectionTestScene.unity";
+            PlayModeScenePath = "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/NestedSubSceneSectionTestScene.unity";
         }
 
         // Only works in Editor for now until we can support SubScene building with new build settings in a test

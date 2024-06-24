@@ -1464,7 +1464,7 @@ Release preparations, no functional changes.
 ### Changed
 
 * Added a fast path for `IJobEntityBatch.RunWithoutJobs()` and `IJobEntityBatchWithIndex.RunWithoutJobs()` where query filtering is disabled, resulting up to a 30% reduction in performance overhead.
-* Merged `com.unity.dots.editor` package into `com.unity.entities` package, effectively deprecating the DOTS Editor as a standalone package. All the DOTS Editor package functionality is now included when referencing the Entities package.
+* Merged `com.unity.dots.editor` package into `com.squalive.entities` package, effectively deprecating the DOTS Editor as a standalone package. All the DOTS Editor package functionality is now included when referencing the Entities package.
 * DOTS Runtime now uses source generators for codegen.
 * Make parts of EntityPatcher burst compatible to prepare for burst compilation of EntityPatcher for its performance improvement.
 * `Entity.Equals(object compare)` now returns false if the `compare` object is null, rather than throwing a `NullReferenceException`.
@@ -1613,7 +1613,7 @@ Release preparations, no functional changes.
 ### Changed
 
 * Added a fast path for `IJobEntityBatch.RunWithoutJobs()` and `IJobEntityBatchWithIndex.RunWithoutJobs()` where query filtering is disabled, resulting up to a 30% reduction in performance overhead.
-* Merged `com.unity.dots.editor` package into `com.unity.entities` package, effectively deprecating the DOTS Editor as a standalone package. All the DOTS Editor package functionality is now included when referencing the Entities package.
+* Merged `com.unity.dots.editor` package into `com.squalive.entities` package, effectively deprecating the DOTS Editor as a standalone package. All the DOTS Editor package functionality is now included when referencing the Entities package.
 * DOTS Runtime now uses source generators for codegen.
 * Make parts of EntityPatcher burst compatible to prepare for burst compilation of EntityPatcher for its performance improvement.
 * `Entity.Equals(object compare)` now returns false if the `compare` object is null, rather than throwing a `NullReferenceException`.

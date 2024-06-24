@@ -17,7 +17,7 @@ To use the Entities package, you must have a supported version of Unity installe
 
 To install the package, open the Package Manager window (**Window &gt; Package Manager**) and perform one of the following options:
 
-* [Add the package by its name](xref:upm-ui-quick) (com.unity.entities)
+* [Add the package by its name](xref:upm-ui-quick) (com.squalive.entities)
 * [Add the package from its Git URL](xref:upm-ui-giturl)
 
 ## Additional resources

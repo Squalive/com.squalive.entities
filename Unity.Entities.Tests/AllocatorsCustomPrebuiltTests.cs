@@ -4,7 +4,7 @@ using Unity.Core;
 using Unity.Entities;
 
 // This is the example code used in
-// Packages/com.unity.entities/Documentation~/allocators-custom-prebuilt.md
+// Packages/com.squalive.entities/Documentation~/allocators-custom-prebuilt.md
 
 internal class ExampleWordUpdateAllocator
 {

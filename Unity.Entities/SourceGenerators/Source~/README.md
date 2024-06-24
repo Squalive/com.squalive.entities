@@ -21,7 +21,7 @@ http://dotslab.cds.internal.unity3d.com
 
 Source generator DLLs need to be compiled manually outside of the Unity compilation pipeline using the .NET SDK 6.0 or higher:
 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
-That can be done with dotnet from within the `Packages\com.unity.entities\Unity.Entities\SourceGenerators\Source~` directory:
+That can be done with dotnet from within the `Packages\com.squalive.entities\Unity.Entities\SourceGenerators\Source~` directory:
 
 `dotnet publish -c Release`
 
@@ -30,7 +30,7 @@ Additionally, they can be built/debugged with the SourceGenerator solution in th
 ### Debugging with Rider
 
 - Rebuild the generators as debug: `dotnet publish -c Debug`.
-- Open `Packages/com.unity.entities/Unity.Entities/SourceGenerators/Source~/SourceGenerators.sln` with Rider.
+- Open `Packages/com.squalive.entities/Unity.Entities/SourceGenerators/Source~/SourceGenerators.sln` with Rider.
 - Go to the configurations drop-down, select "Edit Configurations...", create a new ".NET Executable" configuration:
   - Open the editor log for the Unity project, look for `##### CommandLine`.
   - Immediately after that should be a line that looks like this:

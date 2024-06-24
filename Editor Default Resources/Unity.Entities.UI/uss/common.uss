@@ -1,10 +1,10 @@
 .unity-platforms__variables
 {
      /* Textures */
-    --remove-button--selected: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/Close S.png");
-    --previous-button--selected: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/PreviousButton.png");
-    --next-button--selected: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/NextButton.png");
-    --circular-reference-icon--selected: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/CircularReference.png");
+    --remove-button--selected: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/Close S.png");
+    --previous-button--selected: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/PreviousButton.png");
+    --next-button--selected: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/NextButton.png");
+    --circular-reference-icon--selected: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/selected/CircularReference.png");
 }
 
 .unity-platforms__row

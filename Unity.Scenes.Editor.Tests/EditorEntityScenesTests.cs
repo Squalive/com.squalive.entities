@@ -24,7 +24,7 @@ namespace Unity.Scenes.Tests
 
             using var dstWorld = new World("");
             var dstEntitymanager = dstWorld.EntityManager;
-            var material = AssetDatabase.LoadAssetAtPath<Material>("Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/Test.mat");
+            var material = AssetDatabase.LoadAssetAtPath<Material>("Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/Test.mat");
 
             var entity = m_Manager.CreateEntity();
             m_Manager.AddComponentData(entity, new MaterialRefComponent { Value = material });

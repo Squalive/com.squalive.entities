@@ -24,7 +24,7 @@ namespace Unity.Scenes.Editor.Tests
         [SerializeField]
         private string m_Guid;
 
-        private static string m_ScriptFilePath = "Packages/com.unity.entities/Unity.Scenes.Editor.Tests/TypeDependencyCacheTestAssembly/TypeDependencyCacheAuthoring.cs";
+        private static string m_ScriptFilePath = "Packages/com.squalive.entities/Unity.Scenes.Editor.Tests/TypeDependencyCacheTestAssembly/TypeDependencyCacheAuthoring.cs";
 
         [SerializeField]
         private string m_ScriptFileFullPath;

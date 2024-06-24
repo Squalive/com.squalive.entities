@@ -109,7 +109,7 @@ namespace Unity.Entities.Hybrid.Tests.Baking
 
         protected static T LoadAsset<T>(string name) where T : UnityObject
         {
-            var path = $"Packages/com.unity.entities/Unity.Entities.Hybrid.Tests/Prefabs/{name}";
+            var path = $"Packages/com.squalive.entities/Unity.Entities.Hybrid.Tests/Prefabs/{name}";
             var asset = AssetDatabase.LoadAssetAtPath<T>(path);
             if (asset == null)
                 throw new Exception($"Failed to load asset {typeof(T).Name} at '{path}'");

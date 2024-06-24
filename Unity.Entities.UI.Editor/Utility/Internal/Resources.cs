@@ -4,7 +4,7 @@ namespace Unity.Entities.UI
 {
     static class Resources
     {
-        public const string BasePath = "Packages/com.unity.entities/";
+        public const string BasePath = "Packages/com.squalive.entities/";
         public const string ResourcesPath = BasePath + "Editor Default Resources/Unity.Entities.UI/";
         public const string Uxml = ResourcesPath + "uxml/";
         public const string Uss = ResourcesPath + "uss/";

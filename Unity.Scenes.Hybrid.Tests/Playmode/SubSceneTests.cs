@@ -20,8 +20,8 @@ namespace Unity.Scenes.Hybrid.Tests.Playmode
 
         public SubSceneTests()
         {
-            PlayModeScenePath = "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/Subscene/TestSubScene.unity";
-            BuildScenePath = "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestScene.unity";
+            PlayModeScenePath = "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/Subscene/TestSubScene.unity";
+            BuildScenePath = "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestScene.unity";
             BuildSceneGUID = new Unity.Entities.Hash128("785a8fb7f3d8213b9b65da9d2c45c22b");
         }
 
