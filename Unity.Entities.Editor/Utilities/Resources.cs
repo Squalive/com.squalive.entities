@@ -10,7 +10,7 @@ namespace Unity.Entities.Editor
             rootElement.AddToClassList("variables");
         }
 
-        public const string PackageId = "com.unity.entities";
+        public const string PackageId = "com.squalive.entities";
 
         public static class Templates
         {
