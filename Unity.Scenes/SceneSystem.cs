@@ -376,7 +376,49 @@ namespace Unity.Scenes
             return (SceneSectionStreamingSystem.StreamingStatus.Loaded ==
                     world.EntityManager.GetComponentData<SceneSectionStreamingSystem.StreamingState>(sectionEntity).Status);
         }
+        
+        internal static void WriteManifestFile( string buildFolder, Hash128[] sceneHashes )
+        {
+            var manifestPath = Path.Combine( buildFolder, "manifest.bin" );
+            
+            var builder = new BlobBuilder( Allocator.Temp );
 
+            ref var root = ref builder.ConstructRoot<BuildManifest>();
+
+            var scenes = builder.Allocate( ref root.Scenes, sceneHashes.Length );
+
+            for ( var i = 0; i < sceneHashes.Length; i++ )
+            {
+                scenes[ i ] = sceneHashes[ i ];
+            }
+
+            BlobAssetReference<BuildManifest>.Write( builder, manifestPath, BuildManifest.ManifestCurrentVersion );
+            
+            builder.Dispose();
+        }
+
+        public static BlobAssetReference<BuildManifest> ReadManifest( string manifestPath )
+        {
+            if ( !File.Exists( manifestPath ) )
+            {
+                Debug.LogError( $"No manifest file founded at given location: {manifestPath}" );
+                return default;
+            }
+
+            if ( !BlobAssetReference<BuildManifest>.TryRead( manifestPath, BuildManifest.ManifestCurrentVersion, out var result ) )
+            {
+                Debug.LogError( $"Unable to read manifest from {manifestPath}." );
+                return default;
+            }
+
+            var parent = Directory.GetParent( manifestPath );
+
+            if ( parent != null )
+                result.Value.Path = parent.FullName;
+
+            return result;
+        }
+        
         /// <summary>
         /// Load a scene by its weak reference id.
         /// </summary>
