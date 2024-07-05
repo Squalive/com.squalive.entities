@@ -314,7 +314,7 @@ namespace Unity.Entities
             var systemPointer = systemState->m_SystemPtr;
             var delegates = s_Data.Data.GetSystemDelegates(metaIndex);
             bool isBurst = true;
-            CheckBurst(ref isBurst);
+            // CheckBurst(ref isBurst);
 
             var functionIndex = (int)functionType;
             if (0 != (delegates.PresentFunctionBits & (1 << functionIndex)))
