@@ -27,9 +27,9 @@ namespace Unity.Entities.Tests
         {
 #if UNITY_EDITOR
 #if !DOTS_DISABLE_DEBUG_NAMES
-            k_CSVExportFilePath = "Packages/com.squalive.entities/Unity.Entities.Tests/Journaling/entities-journaling-export.csv";
+            k_CSVExportFilePath = "Packages/com.unity.entities/Unity.Entities.Tests/Journaling/entities-journaling-export.csv";
 #else
-            k_CSVExportFilePath = "Packages/com.squalive.entities/Unity.Entities.Tests/Journaling/entities-journaling-export-no-debug-names.csv";
+            k_CSVExportFilePath = "Packages/com.unity.entities/Unity.Entities.Tests/Journaling/entities-journaling-export-no-debug-names.csv";
 #endif
 #else
 #if !DOTS_DISABLE_DEBUG_NAMES

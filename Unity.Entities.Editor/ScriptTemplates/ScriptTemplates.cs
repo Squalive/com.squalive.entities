@@ -4,7 +4,7 @@ namespace Unity.Entities.Editor
 {
     public static class ScriptTemplates
     {
-        public const string ScriptTemplatePath = "Packages/com.squalive.entities/Unity.Entities.Editor/ScriptTemplates/";
+        public const string ScriptTemplatePath = "Packages/com.unity.entities/Unity.Entities.Editor/ScriptTemplates/";
 
         [MenuItem("Assets/Create/Entities/IComponentData Script", priority = 1)]
         static void CreateIComponentDataScript()

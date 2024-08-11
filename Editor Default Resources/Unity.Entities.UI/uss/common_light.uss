@@ -12,12 +12,12 @@
     --runtime-bar-color: #B73C15;
 
     /* Textures */
-    --remove-button: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/light/Close S.png");
-    --error-icon: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/light/Error.png");
-    --previous-button: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/light/PreviousButton.png");
-    --next-button: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/light/NextButton.png");
-    --circular-reference-icon: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/light/CircularReference.png");
-    --add-icon: resource("Packages/com.squalive.entities/Editor Default Resources/Unity.Entities.UI/icons/light/Add.png");
+    --remove-button: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/light/Close S.png");
+    --error-icon: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/light/Error.png");
+    --previous-button: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/light/PreviousButton.png");
+    --next-button: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/light/NextButton.png");
+    --circular-reference-icon: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/light/CircularReference.png");
+    --add-icon: resource("Packages/com.unity.entities/Editor Default Resources/Unity.Entities.UI/icons/light/Add.png");
 }
 
 .unity-platforms__highlight

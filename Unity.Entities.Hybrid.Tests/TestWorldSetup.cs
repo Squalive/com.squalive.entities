@@ -8,7 +8,7 @@ namespace Unity.Entities.Tests
 {
     public static class TestWorldSetup
     {
-        public static readonly string[] EntitiesPackage = { "com.squalive.entities" };
+        public static readonly string[] EntitiesPackage = { "com.unity.entities" };
         public static IEnumerable<Type> FilterSystemsToPackages(IEnumerable<Type> systems, IEnumerable<string> packageNames)
         {
             const string packagePrefix = "Packages";

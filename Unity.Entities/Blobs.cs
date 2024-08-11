@@ -578,7 +578,7 @@ namespace Unity.Entities
         /// <param name="result">The resulting BlobAssetReference if the data was read successful.</param>
         /// <param name="numBytesRead">Number of bytes of the data buffer that are read.</param>
         /// <returns>A bool if the read was successful or not.</returns>
-        public static unsafe bool TryReadInplace(byte* data, long size, int version, out BlobAssetReference<T> result, out int numBytesRead)
+        internal static unsafe bool TryReadInplace(byte* data, long size, int version, out BlobAssetReference<T> result, out int numBytesRead)
         {
             result = default;
             numBytesRead = 0;

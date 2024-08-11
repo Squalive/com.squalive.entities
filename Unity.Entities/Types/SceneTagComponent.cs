@@ -261,11 +261,11 @@ namespace Unity.Entities
     /// </summary>
     public struct RequestSceneLoaded : IComponentData
     {
-        public FixedString512Bytes LoadDir;
-        
         /// <summary>
         /// Contains flags that control the load process for sub scenes.
         /// </summary>
         public SceneLoadFlags LoadFlags;
+
+        public FixedString512Bytes LoadDir;
     }
 }

@@ -18,7 +18,7 @@ namespace Unity.Entities.Build
         {
             var instance = DotsGlobalSettings.Instance;
 
-            StyleSheet stylesheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.squalive.entities/Unity.Entities.Build/StyleSheets/dots-settings-window.uss");
+            StyleSheet stylesheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.unity.entities/Unity.Entities.Build/StyleSheets/dots-settings-window.uss");
             rootElement.styleSheets.Add(stylesheet);
             rootElement.AddToClassList("sb-settings-window");
 
