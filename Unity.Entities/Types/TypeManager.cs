@@ -806,7 +806,7 @@ namespace Unity.Entities
             /// <param name="typeSize">Size of the component type</param>
             /// <param name="bloomFilterMask">The bloom filter mask for this component, used to accelerate "is type T in set of types S" checks. The default value of zero is safe, but ineffective.</param>
             public TypeInfo(int typeIndex, TypeCategory category, int entityOffsetCount, int entityOffsetStartIndex,
-                            ulong memoryOrdering, ulong stableTypeHash, int bufferCapacity, int sizeInChunk, int elementSize,
+                            ulong memoryOrdering, ulong stableTypeHash, uint baseHash, int bufferCapacity, int sizeInChunk, int elementSize,
                             int alignmentInBytes, int maximumChunkCapacity, int writeGroupCount, int writeGroupStartIndex,
                             bool hasBlobRefs, int blobAssetRefOffsetCount, int blobAssetRefOffsetStartIndex,
                             int weakAssetRefOffsetCount, int weakAssetRefOffsetStartIndex,
@@ -818,6 +818,7 @@ namespace Unity.Entities
                 EntityOffsetStartIndex = entityOffsetStartIndex;
                 MemoryOrdering = memoryOrdering;
                 StableTypeHash = stableTypeHash;
+                BaseHash = baseHash;
                 BloomFilterMask = bloomFilterMask;
                 BufferCapacity = bufferCapacity;
                 SizeInChunk = sizeInChunk;
@@ -875,6 +876,8 @@ namespace Unity.Entities
             /// </remarks>
             /// <seealso cref="TypeHash"/>
             public   readonly ulong         StableTypeHash;
+
+            public readonly uint BaseHash;
 
             /// <summary>
             /// Bitmask used to accelerate "is type set A a subset of type set B?" queries.
@@ -1588,7 +1591,7 @@ namespace Unity.Entities
             AddFastEqualityInfo(null);
             AddTypeInfoToTables(null,
                 new TypeInfo(0, TypeCategory.ComponentData, 0, -1,
-                    0L, 0L,  -1, 0, 0, 0,
+                    0L, 0L, 0,  -1, 0, 0, 0,
                     TypeManager.MaximumChunkCapacity, 0, -1, false, 0,
                     -1, 0, -1, 0, -1, 0, 0L),
                 "null", 0);
@@ -1605,14 +1608,14 @@ namespace Unity.Entities
 
             // Entity is special and is treated as having an entity offset at 0 (itself)
             s_EntityOffsetList.Add(new EntityOffsetInfo() { Offset = 0 });
-            AddTypeInfoToTables(typeof(Entity),
-                new TypeInfo(1, TypeCategory.EntityData, entityTypeIndex.Value, 0,
-                    0, entityStableTypeHash, -1, UnsafeUtility.SizeOf<Entity>(),
-                    UnsafeUtility.SizeOf<Entity>(), CalculateAlignmentInChunk(sizeof(Entity)),
+            AddTypeInfoToTables( typeof( Entity ),
+                new TypeInfo( 1, TypeCategory.EntityData, entityTypeIndex.Value, 0,
+                    0, entityStableTypeHash, TypeHash.FNV1A32( nameof( Entity ) ), -1, UnsafeUtility.SizeOf<Entity>( ),
+                    UnsafeUtility.SizeOf<Entity>( ), CalculateAlignmentInChunk( sizeof( Entity ) ),
                     TypeManager.MaximumChunkCapacity, 0, -1, false, 0,
-                    -1, 0, -1, 0, -1, UnsafeUtility.SizeOf<Entity>(),
-                    bloomFilterMask:0L),
-                "Unity.Entities.Entity", 0);
+                    -1, 0, -1, 0, -1, UnsafeUtility.SizeOf<Entity>( ),
+                    bloomFilterMask : 0L ),
+                "Unity.Entities.Entity", 0 );
 
             SharedTypeIndex<Entity>.Ref.Data = entityTypeIndex;
         }
@@ -3315,7 +3318,7 @@ namespace Unity.Entities
             }
 
             return new TypeInfo(typeIndex, category, entityOffsetCount, entityOffsetIndex,
-                memoryOrdering, stableTypeHash, bufferCapacity, sizeInChunk,
+                memoryOrdering, stableTypeHash, TypeHash.FNV1A32( type.Name ), bufferCapacity, sizeInChunk,
                 elementSize > 0 ? elementSize : sizeInChunk, alignmentInBytes,
                 maxChunkCapacity, writeGroupCount, writeGroupIndex,
                 hasBlobReferences, blobAssetRefOffsetCount, blobAssetRefOffsetIndex,

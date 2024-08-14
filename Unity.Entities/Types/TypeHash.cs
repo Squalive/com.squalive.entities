@@ -51,6 +51,21 @@ namespace Unity.Entities
         const ulong kFNV1A64OffsetBasis = 14695981039346656037;
         const ulong kFNV1A64Prime = 1099511628211;
 
+        public static uint FNV1A32( string value )
+        {
+            const uint offsetBasis = 2166136261;
+            const uint prime = 16777619;
+
+            var result = offsetBasis;
+
+            foreach ( var c in value )
+            {
+                result = prime * ( result ^ (byte)( c & 255 ) );
+                result = prime * ( result ^ (byte)( c >> 8 ) );
+            }
+            return result;
+        }
+
         /// <summary>
         /// Generates a FNV1A64 hash.
         /// </summary>
