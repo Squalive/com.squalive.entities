@@ -30,3 +30,4 @@ using System.Runtime.CompilerServices;
 [assembly: InternalsVisibleTo("Unity.Entities.Build.Editor")]
 [assembly: InternalsVisibleTo("Unity.NetCode.Authoring.Hybrid")]
 [assembly: InternalsVisibleTo("SqualiveNetworking.ArmAlive.Hybrid.Editor.Server")]
+[assembly: InternalsVisibleTo("SqualiveNetworking.ArmAlive.Hybrid.Runtime.Server")]
