@@ -78,7 +78,7 @@ namespace Unity.Scenes.Editor.Tests
             LiveConversionTest.SetUp();
         }
 
-        static string AssetPath(string name) => "Packages/com.squalive.entities/Unity.Scenes.Editor.Tests/Assets/" + name;
+        static string AssetPath(string name) => "Packages/com.unity.entities/Unity.Scenes.Editor.Tests/Assets/" + name;
         static string AssetFullPath(string name) => $"{Application.dataPath}/../../../{AssetPath(name)}";
         static string TempFolderPath() => $"{Application.dataPath}/../Temp";
         static string ScenePath(string name) => AssetPath(name) + ".unity";

@@ -52,8 +52,8 @@ namespace Unity.Scenes.Editor
 
             public void Initialize(EditorWindow editorWindow, VisualElement rootVisualElement)
             {
-                VisualTreeAsset uiAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Packages/com.squalive.entities/Unity.Scenes.Editor/ClearEntitiesCacheWindow/ClearEntitiesCacheWindow.uxml");
-                rootVisualElement.styleSheets.Add(AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.squalive.entities/Unity.Scenes.Editor/ClearEntitiesCacheWindow/ClearEntitiesCacheWindow.uss"));
+                VisualTreeAsset uiAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Packages/com.unity.entities/Unity.Scenes.Editor/ClearEntitiesCacheWindow/ClearEntitiesCacheWindow.uxml");
+                rootVisualElement.styleSheets.Add(AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.unity.entities/Unity.Scenes.Editor/ClearEntitiesCacheWindow/ClearEntitiesCacheWindow.uss"));
 
                 m_Root = uiAsset.CloneTree();
                 m_Root.style.flexGrow = 1;

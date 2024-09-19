@@ -48,7 +48,7 @@ namespace Unity.Scenes.Editor
             //TODO: Find a better way to enforce Version 2 compatibility
             bool v2Enabled = (bool)typeof(AssetDatabase).GetMethod("IsV2Enabled", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, null);
             if (!v2Enabled)
-                throw new System.InvalidOperationException("com.squalive.entities requires Asset Pipeline Version 2. Please enable Version 2 in Project Settings / Editor / Asset Pipeline / Mode");
+                throw new System.InvalidOperationException("com.unity.entities requires Asset Pipeline Version 2. Please enable Version 2 in Project Settings / Editor / Asset Pipeline / Mode");
 
             // Custom dependencies are transmitted to the import worker so dont spent time on registering them
             if (AssetDatabaseCompatibility.IsAssetImportWorkerProcess())

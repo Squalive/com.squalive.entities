@@ -74,7 +74,7 @@ namespace Unity.Entities.Tests
         {
             var material =
                 AssetDatabase.LoadAssetAtPath<Material>(
-                    "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/Test.mat");
+                    "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/Test.mat");
 
             using (var differ = new EntityManagerDiffer(SrcWorld.EntityManager, SrcWorld.UpdateAllocator.ToAllocator))
             {

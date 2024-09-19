@@ -34,7 +34,7 @@ namespace Unity.Scenes.Hybrid.Tests
         public TestLiveConversionSettings m_Settings;
         public SubSceneSectionTests() : base()
         {
-            PlayModeScenePath = "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/SubSceneSectionTestScene.unity";
+            PlayModeScenePath = "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/SubSceneSectionTestScene.unity";
         }
 
         // Only works in Editor for now until we can support SubScene building with new build settings in a test

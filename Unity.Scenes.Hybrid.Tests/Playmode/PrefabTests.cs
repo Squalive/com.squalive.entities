@@ -13,9 +13,9 @@ namespace Unity.Scenes.Hybrid.Tests.Playmode
         public PrefabTests()
         {
             // In the editor we can produce an entity file from a prefab directly
-            PlayModeScenePath = "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestPrefab.prefab";
+            PlayModeScenePath = "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestPrefab.prefab";
             // In a player build we need a scene to reference the prefab with EntityPrefabReference to produce an entity file for the prefab
-            BuildScenePath = "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestSceneWithPrefabReferenced.unity";
+            BuildScenePath = "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestSceneWithPrefabReferenced.unity";
             // This GUID needs to be hardcoded because the PrefabTests instance running the test is different than the one from the Prebuild/PostBuild steps. And in a player build we can't have access to Editor API to retrieve the GUID from the asset path
             BuildSceneGUID = new Hash128("7cd006e3eb08a624a8fc5c1b782924eb");
         }
@@ -100,7 +100,7 @@ namespace Unity.Scenes.Hybrid.Tests.Playmode
             var loadParams = new SceneSystem.LoadParameters { Flags = SceneLoadFlags.BlockOnImport };
 
 #if UNITY_EDITOR
-            var modelPrefabGUID = SetupTestScene("Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestModel.fbx");
+            var modelPrefabGUID = SetupTestScene("Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestModel.fbx");
             Assert.IsTrue(modelPrefabGUID.IsValid);
             var prefabReference = new EntityPrefabReference(modelPrefabGUID);
 #else

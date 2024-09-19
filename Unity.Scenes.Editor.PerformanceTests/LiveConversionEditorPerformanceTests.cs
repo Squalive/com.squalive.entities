@@ -133,7 +133,7 @@ namespace Unity.Scenes.Editor.Tests
             m_Objects.TearDown();
         }
 
-        protected static string AssetPath(string name) => "Packages/com.squalive.entities/Unity.Scenes.Editor.PerformanceTests/Assets/" + name;
+        protected static string AssetPath(string name) => "Packages/com.unity.entities/Unity.Scenes.Editor.PerformanceTests/Assets/" + name;
 
         public enum ObjectKind
         {

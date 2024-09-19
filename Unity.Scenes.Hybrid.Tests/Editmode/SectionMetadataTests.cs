@@ -12,7 +12,7 @@ namespace Unity.Scenes.Hybrid.Tests
     {
         public SectionMetadataTests() : base()
         {
-            PlayModeScenePath = "Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestSubSceneWithSectionMetadata.unity";
+            PlayModeScenePath = "Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/TestSceneWithSubScene/TestSubSceneWithSectionMetadata.unity";
         }
 
         [OneTimeSetUp]

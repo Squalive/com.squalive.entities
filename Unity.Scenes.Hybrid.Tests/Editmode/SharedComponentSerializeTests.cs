@@ -76,7 +76,7 @@ public class SharedComponentSerializeTests
 
     TestStruct ConfigureStruct()
     {
-        var material = AssetDatabase.LoadAssetAtPath<Material>("Packages/com.squalive.entities/Unity.Scenes.Hybrid.Tests/Test.mat");
+        var material = AssetDatabase.LoadAssetAtPath<Material>("Packages/com.unity.entities/Unity.Scenes.Hybrid.Tests/Test.mat");
         var srcData = new TestStruct();
         srcData.Value = 5;
         srcData.EnumValue = MyEnum.Blah;
