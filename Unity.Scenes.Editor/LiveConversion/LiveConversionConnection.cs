@@ -306,13 +306,14 @@ namespace Unity.Scenes.Editor
 
             // By default all scenes need to have m_GameObjectSceneCullingMask, otherwise they won't show up in game view
             _GUIDToEditScene.Clear();
+#if ENABLE_SUBSCENE
             for (int i = 0; i != EditorSceneManager.sceneCount; i++)
             {
                 var scene = EditorSceneManager.GetSceneAt(i);
 
                 //this is to avoid trying to get the guid of a scene loaded from a content archive during play mode
-                if (!scene.path.StartsWith("Assets/", System.StringComparison.OrdinalIgnoreCase) &&
-                    !scene.path.StartsWith("Packages/", System.StringComparison.OrdinalIgnoreCase))
+                if (!scene.path.StartsWith("Assets/", StringComparison.OrdinalIgnoreCase) &&
+                    !scene.path.StartsWith("Packages/", StringComparison.OrdinalIgnoreCase))
                     continue;
 
                 var sceneGUID = AssetDatabaseCompatibility.PathToGUID(scene.path);
@@ -323,6 +324,7 @@ namespace Unity.Scenes.Editor
                         _GUIDToEditScene.Add(sceneGUID, scene);
                 }
             }
+#endif
 
             foreach (var scene in _SceneGUIDToLiveConversion)
             {
