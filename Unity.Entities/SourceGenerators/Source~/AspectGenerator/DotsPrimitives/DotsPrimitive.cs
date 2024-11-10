@@ -165,13 +165,13 @@ namespace Unity.Entities.SourceGen.Aspect
                 case PrimitiveType.Nothing:
                     return printer;
                 case PrimitiveType.BufferAccessor:
-                    return printer.PrintBeginLine($"global::Unity.Entities.BufferAccessor<").Print(Bind.ComponentTypeName).Print("> ").Print(fieldName).PrintEndLine(";");
+                    return printer.PrintBeginLine($"public global::Unity.Entities.BufferAccessor<").Print(Bind.ComponentTypeName).Print("> ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.ComponentNativeArray:
-                    return printer.PrintBeginLine("global::Unity.Collections.NativeArray<").Print(Bind.ComponentTypeName).Print("> ").Print(fieldName).PrintEndLine(";");
+                    return printer.PrintBeginLine("public global::Unity.Collections.NativeArray<").Print(Bind.ComponentTypeName).Print("> ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.EnabledMask:
                     return printer.PrintBeginLine("public global::Unity.Entities.EnabledMask ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.EntityNativeArray:
-                    return printer.PrintBeginLine("global::Unity.Collections.NativeArray<global::Unity.Entities.Entity> ").Print(fieldName).PrintEndLine(";");
+                    return printer.PrintBeginLine("public global::Unity.Collections.NativeArray<global::Unity.Entities.Entity> ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.Entity:
                     return printer.PrintBeginLine("global::Unity.Entities.Entity ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.BufferTypeHandle:
@@ -182,7 +182,7 @@ namespace Unity.Entities.SourceGen.Aspect
                 case PrimitiveType.EntityTypeHandle:
                     return printer.PrintBeginLine("global::Unity.Entities.EntityTypeHandle ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.SharedComponentTypeHandle:
-                    return printer.PrintBeginLine($"public global::Unity.Entities.SharedComponentTypeHandle<").Print(Bind.ComponentTypeName).Print("> ").Print(fieldName).PrintEndLine(";");
+                    return printer.PrintBeginLine($"global::Unity.Entities.SharedComponentTypeHandle<").Print(Bind.ComponentTypeName).Print("> ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.BufferLookup:
                     return printer.PrintBeginLine($"public global::Unity.Entities.BufferLookup<").Print(Bind.ComponentTypeName).Print("> ").Print(fieldName).PrintEndLine(";");
                 case PrimitiveType.ComponentLookup:
