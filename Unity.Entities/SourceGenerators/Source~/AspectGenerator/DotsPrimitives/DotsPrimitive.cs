@@ -102,37 +102,37 @@ namespace Unity.Entities.SourceGen.Aspect
                 case PrimitiveType.Nothing:
                     return printer;
                 case PrimitiveType.BufferAccessor:
-                    return printer.Print($"global::Unity.Entities.BufferAccessor<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print($"public global::Unity.Entities.BufferAccessor<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.ComponentNativeArray:
-                    return printer.Print("global::Unity.Collections.NativeArray<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Collections.NativeArray<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.EnabledMask:
                     return printer.Print("global::Unity.Entities.EnabledMask");
                 case PrimitiveType.EntityNativeArray:
-                    return printer.Print("global::Unity.Collections.NativeArray<global::Unity.Entities.Entity>");
+                    return printer.Print("public global::Unity.Collections.NativeArray<global::Unity.Entities.Entity>");
                 case PrimitiveType.Entity:
-                    return printer.Print("global::Unity.Entities.Entity");
+                    return printer.Print("public global::Unity.Entities.Entity");
                 case PrimitiveType.BufferTypeHandle:
-                    return printer.Print("global::Unity.Entities.BufferTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Entities.BufferTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.ComponentTypeHandle:
-                    return printer.Print("global::Unity.Entities.ComponentTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Entities.ComponentTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.EntityTypeHandle:
-                    return printer.Print("global::Unity.Entities.EntityTypeHandle");
+                    return printer.Print("public global::Unity.Entities.EntityTypeHandle");
                 case PrimitiveType.SharedComponentTypeHandle:
-                    return printer.Print("global::Unity.Entities.SharedComponentTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Entities.SharedComponentTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.BufferLookup:
-                    return printer.Print($"global::Unity.Entities.BufferLookup<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print($"public global::Unity.Entities.BufferLookup<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.ComponentLookup:
-                    return printer.Print("global::Unity.Entities.ComponentLookup<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Entities.ComponentLookup<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.EntityLookup:
                     return printer;
                 case PrimitiveType.EntityStorageInfoLookup:
-                    return printer.Print("global::Unity.Entities.EntityStorageInfoLookup");
+                    return printer.Print("public global::Unity.Entities.EntityStorageInfoLookup");
                 case PrimitiveType.SharedComponentLookup: // will use a EntityStorageInfoLookup to get the chunk and then use the Scth to decay to the SharedComponent.
-                    return printer.Print("global::Unity.Entities.SharedComponentTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Entities.SharedComponentTypeHandle<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.DynamicBuffer:
-                    return printer.Print("global::Unity.Entities.DynamicBuffer<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Entities.DynamicBuffer<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.EnabledRef:
-                    return printer.Print("global::Unity.Entities.EnabledRef").Print(Bind.IsReadOnly ? "RO" : "RW").Print("<").Print(Bind.ComponentTypeName).Print(">");
+                    return printer.Print("public global::Unity.Entities.EnabledRef").Print(Bind.IsReadOnly ? "RO" : "RW").Print("<").Print(Bind.ComponentTypeName).Print(">");
                 case PrimitiveType.Ref:
                     return RefTypeName(printer, Bind.IsReadOnly, Bind.ComponentTypeName);
                 case PrimitiveType.SharedComponent:
